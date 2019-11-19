@@ -273,7 +273,8 @@ trait JsonQueriable
                 $output[$key] = $isObject ? (object) $val : $val;
             }
         } else {
-            $output = json_decode(json_encode($this->takeColumn($data)), $isObject);
+            // $output = json_decode(json_encode($this->takeColumn($data)), $isObject);
+            $output = $this->takeColumn($data);
         }
 
         return $output;
