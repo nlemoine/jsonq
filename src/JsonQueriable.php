@@ -183,7 +183,7 @@ trait JsonQueriable
             return false;
         }
 
-        rsort($arr);
+        // rsort($arr);
 
         return isset($arr[0]) && is_array($arr[0]);
     }
